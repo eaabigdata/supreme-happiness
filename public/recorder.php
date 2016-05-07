@@ -113,10 +113,6 @@
         <fieldset class="form-group">
           <label for="date">date</label>
           <input type="date" class="form-control" id="date" placeholder="ex 08/15/16">
-
-          <!-- IF WE WANT TO ADD DATE BY POP-UP CALENDAR -->
-          <!-- https://eonasdan.github.io/bootstrap-datetimepicker/ -->
-
         </fieldset>
         <fieldset class="form-group">
           <label for="hours">Hours</label>

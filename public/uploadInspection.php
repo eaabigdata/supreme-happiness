@@ -18,6 +18,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/master.css" rel="stylesheet">
+
+    <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+
+
   </head>
   <body>
 
@@ -101,15 +105,12 @@
         </fieldset>
         <fieldset class="form-group">
           <label for="inputFile">Upload a photo</label>
-          <input type="file" class="form-control-file" id="inputFile">
-          <small class="text-muted">Upload your observation here!</small>
+          <input type="filepicker" data-fp-apikey="A9Y9ttbXcRTeOD3Z1hYl7z"
+          onchange="alert(event.fpfile.url)">
         </fieldset>
         <fieldset class="form-group">
-          <label for="date">date</label>
+          <label for="date">Date</label>
           <input type="date" class="form-control" id="date" placeholder="ex 08/15/16">
-
-          <!-- IF WE WANT TO ADD DATE BY POP-UP CALENDAR -->
-          <!-- https://eonasdan.github.io/bootstrap-datetimepicker/ -->
 
         </fieldset>
         <fieldset class="form-group">

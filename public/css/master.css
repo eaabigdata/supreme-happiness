@@ -43,6 +43,22 @@ body {
   text-align: center;
 }
 
+.float-left {
+  float:left;
+}
+
+h2.featurette-heading {
+  margin-top:30px;
+}
+
+div.row.featurette {
+  padding-left: 10px
+}
+
+.featurette-image {
+  margin-top: 80px;
+  margin-right: 10px;
+}
 
 
 /* CAROUSEL

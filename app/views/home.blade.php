@@ -1,6 +1,22 @@
 @extends('layouts.master')
 
 @section('top-script')
+<style type="text/css">
+  .infosection{
+    background-color: rgb(65, 90, 104);
+    color: #fff;
+    padding: 10px;
+  }
+
+  #kandySubmit{
+    background-color: #025aa5;
+    border-color: #025aa5;
+  }
+
+  #messageBox{
+    color: #000;
+  }
+</style>
 
 @stop
 
@@ -111,7 +127,6 @@
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
-
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
@@ -154,8 +169,44 @@
 
       <!-- /END THE FEATURETTES -->
       </div><!-- /.container -->
+
+      <!-- KANDY AND WIDGET -->
+      <section class="infosection">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <iframe width="250px" height="260px" src="http://data.edwardsaquifer.org/j-17.php" scrolling="no" frameborder="0"></iframe>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                  <legend>Ask A Scientist!</legend>
+
+                  <!-- User input: Recipient and message text fields. -->
+                  {{-- <p>Recipient: <input type="text" id="recipient"/></p> --}}
+
+                  <p>Message: <textarea id="messageBox"> </textarea></p>
+
+                  <!-- User input: Send button. -->
+                  <input id="kandySubmit" type="button" value="Send Message" onclick="sendMessage();"/>
+              </fieldset>
+
+             {{--  <fieldset>
+                  <legend>Messages</legend>
+                  <div id="messages"> </div>
+              </fieldset> --}}
+
+              <fieldset>
+                  <legend>Chat</legend>
+                  <div id="chat-messages"> </div>
+              </fieldset>
+
+            </div>
+          </div>
+        </div>
+      </section>
 @stop
 
 @section('bottom-script')
-
+  <script src="https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.5.0/kandy.min.js" ></script>
+  <script type="text/javascript" src="/js/kandychat.js"></script>
 @stop

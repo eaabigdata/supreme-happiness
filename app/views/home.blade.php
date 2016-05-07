@@ -134,19 +134,19 @@
           <img class="img-circle" src="./img/microscope-icon.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Observe</h2>
           <p>Our growing community of Edwards Aquifer Citizen Scientists plays a crucial role in enhancing our knowledge of the aquifer. Get started now by sharing photos, reporting water levels, and monitoring aquifer trends!</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="" role="button">Become a Citizen Scientist &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="./img/droplet.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Conserve</h2>
           <p>Drought or no drought, conservation is crucial to the health of the aquifer. Monitor your water use, see your impact on water supply, and learn how to be a water saving-guru with our Supreme Happiness app!</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="{{action('InstancesController@create')}}" role="button">Track Your Habits & Conserve &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="./img/diy.png" alt="Generic placeholder image" width="140" height="140">
           <h2>DIYerve</h2>
           <p>Got some awesome water-saving tips and tricks? Share them with the EAA community! Our DIY discussion platform let's water-savers make a difference by teaching others how to reduce water consumption.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="{{action('DiysController@create')}}" role="button">Teach and Be Taught &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
     </div><!-- /.container -->

@@ -5,11 +5,13 @@ class Rating extends \Eloquent {
 	protected $table = 'ratings';
 	// Add your validation rules here
 	public static $rules = [
-		// 'title' => 'required'
+		'rating' => 'numeric'
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = [
+		'rating'
+	];
 
 	public function diys()
 	{

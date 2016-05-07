@@ -5,11 +5,13 @@ class Tag extends \Eloquent {
 	protected $table = 'tags';
 	// Add your validation rules here
 	public static $rules = [
-		// 'title' => 'required'
+		'tag' => 'max:100'
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = [
+		'tag'
+	];
 
 	public function diys()
 	{

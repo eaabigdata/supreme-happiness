@@ -16,7 +16,7 @@ class CreateUsagesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->float('gpm');
-			$table->string('type', 50);
+			$table->string('type');
 		});
 	}
 

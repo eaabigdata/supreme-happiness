@@ -72,12 +72,15 @@ body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
+  background-color: rgba(119, 119, 119, .4);
+  padding: 10px;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 27.5em;
   background-color: #777;
+  border-radius: .3rem
 }
 .carousel-item > img {
   position: absolute;

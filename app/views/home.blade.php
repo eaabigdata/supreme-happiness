@@ -16,7 +16,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <img class="first-slide" src="/img/aquifer.jpg">
+          <img class="first-slide" src="./img/aquifer.jpg">
           <div class="container">
             <div class="carousel-caption text-xs-left">
               <h1>Welcome to the Edwards Aquifer!</h1>
@@ -30,39 +30,62 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="row featurette">
-              <div class="col-md-6">
+              <div class="col-md-6 featurette-text featurette-left">
                 <h2 class="featurette-heading">One of the world's most impressive natural resources.</h2>
-                <p class="lead">The Edwards aquifer is an artesian aquifer located in south-central Texas. Its contributing and recharge zones reach from Bracketville to the outskirts of Austin, covering an area of 6,650 mi², and each year it discharges nearly 200 billions gallons of water to thirsty Texas livestock, crops and residents!</p>
+                <p class="lead">The Edwards aquifer is an artesian aquifer located in south-central Texas. Its contributing and recharge zones reach from Bracketville to the outskirts of Austin, covering an area of 6,650 mi², and each year it discharges nearly 200 billion gallons of water to thirsty Texas livestock, crops and residents!</p>
               </div>
               <div class="col-md-6">
-                <img class="featurette-image img-fluid center-block" src="/img/aquifermap.jpg" alt="Generic placeholder image">
+                <img class="featurette-image img-fluid center-block" src="./img/aquifermap.jpg" alt="Generic placeholder image">
               </div>
             </div>
-          <hr class="featurette-divider">
+            <hr class="featurette-divider">
             <div class="row featurette">
-              <div class="col-md-6 col-md-push-6">
-                <h2 class="featurette-heading">Home to wildlife found nowhere else on earth.</h2>
-                <p class="lead">The Texas Blind Salamanderm may be the most famous aquifer resident, but they're not the only critters you'll find inside! Others include the San Marcos Salamander, Peck's Cave Amphipod, Comal Springs Riffle Beetle, Comal Spring Dryopid Beetle, Fountain Darter and San marcos Gamusia! </p>
+              <div class="col-md-6 col-md-push-6 featurette-text featurette-right">
+                <h2 class="featurette-heading">Home to wildlife found nowhere else in the world.</h2>
+                <p class="lead">The Texas Blind Salamander may be the most famous aquifer resident, but they're not alone! Others include the San Marcos Salamander, Peck's Cave Amphipod, Comal Springs Riffle Beetle, Comal Spring Dryopid Beetle, Fountain Darter and San Marcos Gamusia!</p><p class="lead">Each of these animals is either threatened or endangered. Which is why we have to respect and care for our aquifer.</p>
               </div>
               <div class="col-md-6 col-md-pull-6">
-                <img class="featurette-image img-fluid center-block" src="/img/narrowsalamander.jpg" alt="Generic placeholder image">
+                <img class="featurette-image img-fluid center-block" src="./img/narrow-salamander.jpg" alt="Generic placeholder image">
               </div>
             </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+              <div class="col-md-6 featurette-text featurette-left">
+                <h2 class="featurette-heading">Three different zones, three distinct jobs.</h2>
+                <p class="lead">The Edwards Aquifer is divided into three zones: catchment, recharge, and artesian. Rainfall events in the catchment area cause water to drain through streams into the recharge zone. The recharge zone is composed of exposed limestone which enters into the artesian zone, where wells draw water from the aquifer.</p>
+              </div>
+              <div class="col-md-6">
+                <img class="featurette-image img-fluid center-block" src="./img/cross-section.jpg" alt="Generic placeholder image">
+              </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+              <div class="col-md-6 col-md-push-6 featurette-text featurette-right">
+                <h2 class="featurette-heading">The constant battle against drought.</h2>
+                <p class="lead">San Antonio enters four stages of drought management depending on aquifer levels. There are several year-round restrictions, and more are added as the level diminishes, restricting where, when, and how much water may be used. Sometimes strict regulations are unavoidable, but we should always try to prevent them!</p>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <img class="featurette-image img-fluid center-block" src="./img/drought.jpg" alt="Generic placeholder image">
+              </div>
+            </div>
+            <hr class="featurette-divider">
+            <p class="lead text-center">Are you ready to start doing your part to take care of our precious aquifer?</p>
+            <button type="button" id="info-modal-button" class="btn btn-lg btn-primary" data-dismiss="modal" data-target=".signup-modal">Click here to get started!</button>
           </div>
         </div>
       </div>
         <div class="carousel-item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <img class="second-slide" src="img/scientist.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption text-xs-left">
-              <h1>Join the conservation cause!</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <h1>Become an aquifer scientist!</h1>
+              <p>You can contribute to real usable aquifer data by getting meter readings, taking photos and writing reports! Join today as a Citizen Scientist, and help us gain a better understanding of the aquifer's behavior.</p>
+              <p><a class="btn btn-lg btn-primary" id="signup-button" data-toggle="modal" data-target=".signup-modal">Learn more</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="third-slide" src="img/faucet_drip.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption text-xs-left">
               <h1>Track your water usage habits.</h1>
@@ -92,19 +115,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="/img/microscope-icon.png" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="./img/microscope-icon.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Observe</h2>
           <p>Our growing community of Edwards Aquifer Citizen Scientists plays a crucial role in enhancing our knowledge of the aquifer. Get started now by sharing photos, reporting water levels, and monitoring aquifer trends!</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="/img/droplet.png" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="./img/droplet.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Conserve</h2>
           <p>Drought or no drought, conservation is crucial to the health of the aquifer. Monitor your water use, see your impact on water supply, and learn how to be a water saving-guru with our Supreme Happiness app!</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="/img/diy.png" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="./img/diy.png" alt="Generic placeholder image" width="140" height="140">
           <h2>DIYerve</h2>
           <p>Got some awesome water-saving tips and tricks? Share them with the EAA community! Our DIY discussion platform let's water-savers make a difference by teaching others how to reduce water consumption.</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
@@ -157,5 +180,11 @@
 @stop
 
 @section('bottom-script')
+<script>
+$("#info-modal-button").on('click', (function () {
+   $('#signup-button').trigger('click');
+}));
+
+</script>
 
 @stop

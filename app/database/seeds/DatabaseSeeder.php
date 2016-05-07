@@ -26,14 +26,14 @@ class DatabaseSeeder extends Seeder {
 		DB::table('instances')->delete();
 		
 
-		$this->call('UserTableSeeder');
+		$this->call('UsersTableSeeder');
 		$this->call('DiysTableSeeder');
 		$this->call('TagsTableSeeder');
 		$this->call('RatingsTableSeeder');
 		$this->call('UsagesTableSeeder');
 		$this->call('InstancesTableSeeder');
-		// $this->call('LocationsTableSeeder');
-		// $this->call('ReportsTableSeeder');
+		$this->call('LocationsTableSeeder');
+		$this->call('ReportsTableSeeder');
 		$this->call('DiyTagsTableSeeder');
 		$this->call('DiyRatingsTableSeeder');
 	}

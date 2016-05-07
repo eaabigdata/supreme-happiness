@@ -16,9 +16,9 @@ class DiysTableSeeder extends Seeder {
 			$user = $user->random();
 
 			Diy::create([
-				'title'=>$faker->sentence,
-				'content'=>$faker->text,
-				'user_id'=>$user->id
+				'title'   => $faker->sentence,
+				'content' => $faker->text,
+				'user_id' => $user->id
 			]);
 		}
 	}

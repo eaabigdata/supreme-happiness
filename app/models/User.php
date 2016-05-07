@@ -6,7 +6,7 @@ use Bbatsche\Entrust\Contracts\EntrustUserInterface;
 use Bbatsche\Entrust\Traits\EntrustUserTrait;
 
 class User extends Eloquent implements ConfideUserInterface, EntrustUserInterface
-
+{
 	use ConfideUser, EntrustUserTrait;
 
 	/**

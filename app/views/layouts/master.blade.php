@@ -18,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/master.css" rel="stylesheet">
+    <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
 
     @yield('top-script')
   </head>

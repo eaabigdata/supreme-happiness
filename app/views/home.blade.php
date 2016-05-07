@@ -190,12 +190,7 @@
                   <input id="kandySubmit" type="button" value="Send Message" onclick="sendMessage();"/>
               </fieldset>
 
-             {{--  <fieldset>
-                  <legend>Messages</legend>
-                  <div id="messages"> </div>
-              </fieldset> --}}
-
-              <fieldset>
+              <fieldset class="well">
                   <legend>Chat</legend>
                   <div id="chat-messages"> </div>
               </fieldset>

@@ -6,11 +6,15 @@ class Usage extends \Eloquent {
 
 	// Add your validation rules here
 	public static $rules = [
-		// 'title' => 'required'
+		'type' => 'required|max:50',
+		'gpm'  => 'required|numeric'
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = [
+		'type',
+		'gpm'
+	];
 
 	public function instances()
 	{

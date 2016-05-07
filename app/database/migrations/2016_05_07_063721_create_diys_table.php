@@ -14,12 +14,15 @@ class CreateDiysTable extends Migration {
 	{
 		Schema::create('diys', function(Blueprint $table)
 		{
-			$table->increments('id');
 			$table->timestamps();
-			$table->string('title', 50);
+			$table->string('title');
 			$table->text('content');
+			
 			$table->integer('user_id')->unsigned();
 		    $table->foreign('user_id')->references('id')->on('users');
+			
+			$table->increments('id');
+			$table->softDeletes();
 		});
 	}
 

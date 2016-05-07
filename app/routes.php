@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('layouts.master');
+Route::get('/', 'HomeController@showWelcome');
 
-});
+// Route::get('/test', 'DiysController@create');
 
 Route::resource('diys', 'DiysController');
 Route::resource('tags', 'TagsController');

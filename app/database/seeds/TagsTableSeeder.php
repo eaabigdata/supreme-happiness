@@ -7,14 +7,34 @@ class TagsTableSeeder extends Seeder {
 
 	public function run()
 	{
-		$faker = Faker::create();
+		$tag= new Tag();
+		$tag->name = 'toilet';
+		$tag->save();
 
-		foreach(range(1, 10) as $index)
-		{
-			Tag::create([
+		$tag= new Tag();
+		$tag->name = 'hose';
+		$tag->save();
 
-			]);
-		}
+		$tag= new Tag();
+		$tag->name = 'pool';
+		$tag->save();
+
+		$tag= new Tag();
+		$tag->name = 'hack';
+		$tag->save();
+
+		$tag= new Tag();
+		$tag->name = 'conserve';
+		$tag->save();
+
+		$tag= new Tag();
+		$tag->name = 'water';
+		$tag->save();
+
+		$tag= new Tag();
+		$tag->name = 'salamander habitat';
+		$tag->save();
+
 	}
 
 }

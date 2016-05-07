@@ -133,6 +133,24 @@
         </div>
       <hr>
         <h2>How Long Were You Using Water?</h2>
+
+        <h3>Use The Timer</h3>
+          <div id="timer">
+            <span id="sw_h">00</span>:
+            <span id="sw_m">00</span>:
+            <span id="sw_s">00</span>:
+            <span id="sw_ms">00</span>
+            <br/>
+            <br/>
+            <input type="button" value="Start" id="sw_start" />
+            <input type="button" value="Pause" id="sw_pause" />
+            <input type="button" value="Stop"  id="sw_stop" />
+            <input type="button" value="Reset" id="sw_reset" />
+            <br/>
+            <br/>
+            <span class="hide" id="sw_status">Stopwatch Status: Idle</span>
+        </div>
+        <h3>Or enter manually</h3>
         <fieldset class="form-group">
           <label for="recordHours">Hours</label>
           <input type="number" class="form-control" id="recordHours" placeholder="Enter number of hours" value="0">
@@ -164,6 +182,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/recorder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
   </body>

@@ -155,7 +155,7 @@
         <div class="col-lg-4">
           <img class="img-circle" src="./img/diy.png" alt="Generic placeholder image" width="140" height="140">
           <h2>DIYerve</h2>
-          <p>Did you discover an awesome water-saving tip? Share it on our DIY discussion board and help teach others how to conserve. Share your .</p>
+          <p>Got some awesome water-saving tips and tricks? Share them with the EAA community! Our DIY discussion platform let's water-savers make a difference by teaching others how to reduce water consumption.</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->

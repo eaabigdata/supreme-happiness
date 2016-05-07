@@ -1,7 +1,8 @@
 <?php
 
 class Location extends \Eloquent {
-	protected $table = 'locations';
+	
+    protected $table = 'locations';
 
     protected $fillable = [
         'title',

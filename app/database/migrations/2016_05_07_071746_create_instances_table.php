@@ -15,13 +15,16 @@ class CreateInstancesTable extends Migration {
 		Schema::create('instances', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->time('start');
-			$table->time('stop');
-			$table->float('total');
-			$table->integer('user_id')->unsigned();
-		    $table->foreign('user_id')->references('id')->on('users');
+			$table->integer('duration_in_ms')->unsigned();
+			$table->float('total_gpm');
+
+			$table->integer('profile_id')->unsigned();
+		    $table->foreign('profile_id')->references('id')->on('profiles');
 		    $table->integer('usage_id')->unsigned();
 		    $table->foreign('usage_id')->references('id')->on('usages');
+
+		    $table->timestamps();
+		    $table->softDeletes();
 		});
 	}
 

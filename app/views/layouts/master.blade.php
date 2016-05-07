@@ -45,6 +45,20 @@
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
               <h4 class="modal-title" id="mySmallModalLabel">Welcome back!</h4>
+              <div id="loginEmailField" class="form-group col-sm-10 col-sm-offset-1">
+                <label for="loginEmail" class="sr-only">Email</label>
+                <input id="loginEmail" type="email" class="form-control" placeholder="Email Address">
+              </div>
+              <div id="loginPasswordField" class="form-group col-sm-10 col-sm-offset-1">
+                  <label for="loginPass" class="sr-only">Password</label>
+                  <input id="loginPass" type="password" class="form-control" placeholder="Password">
+              </div>
+              <div id="emailLoginBtnDiv" class="form-group col-sm-10 col-sm-offset-1 text-center">
+                  <button id="loginWithEmailBtn" type="submit" class="btn btn-primary btn-block">CLICK TO LOG IN</button>
+              </div>
+              <div class="text-center">
+                  <a href="#" id="forgotPasswordLink">Forgot your password?</a>
+              </div>
             </div>
           </div>
         </div>
@@ -67,9 +81,6 @@
               </div>
               <div id="emailLoginBtnDiv" class="form-group col-sm-10 col-sm-offset-1 text-center">
                   <button id="loginWithEmailBtn" type="submit" class="btn btn-primary btn-block">CLICK TO LOG IN</button>
-              </div>
-              <div class="text-center">
-                  <a href="#" id="forgotPasswordLink">Forgot your password?</a>
               </div>
             </div>
           </div>
@@ -96,10 +107,36 @@
             <div class="carousel-caption text-xs-left">
               <h1>Welcome to the Edwards Aquifer!</h1>
               <p>The Edwards Acquifer - an artesian aquifer in the heart of Texas - provides water to more than two million Texas residents. Let's learn more about the aquifer, its history, and what makes it so special!</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
+              <button type="button" class="btn btn-lg btn-primary" id="slide-one-learn" data-toggle="modal" data-target=".slide-one-modal">Learn More</button>
             </div>
           </div>
         </div>
+        <!-- Slide One Modal -->
+      <div class="modal fade slide-one-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="row featurette">
+              <div class="col-md-6">
+                <h2 class="featurette-heading">One of the world's most impressive natural resources.</h2>
+                <p class="lead">The Edwards aquifer is an artesian aquifer located in south-central Texas. Its contributing and recharge zones reach from Bracketville to the outskirts of Austin, covering an area of 6,650 mi², and each year it discharges nearly 200 billions gallons of water to thirsty Texas livestock, crops and residents!</p>
+              </div>
+              <div class="col-md-6">
+                <img class="featurette-image img-fluid center-block" src="./img/aquifermap.jpg" alt="Generic placeholder image">
+              </div>
+            </div>
+          <hr class="featurette-divider">
+            <div class="row featurette">
+              <div class="col-md-6 col-md-push-6">
+                <h2 class="featurette-heading">Home to wildlife found nowhere else on earth.</h2>
+                <p class="lead">The Texas Blind Salamanderm may be the most famous aquifer resident, but they're not the only critters you'll find inside! Others include the San Marcos Salamander, Peck's Cave Amphipod, Comal Springs Riffle Beetle, Comal Spring Dryopid Beetle, Fountain Darter and San marcos Gamusia! </p>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <img class="featurette-image img-fluid center-block" src="./img/narrowsalamander.jpg" alt="Generic placeholder image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
         <div class="carousel-item">
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">

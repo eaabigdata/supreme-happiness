@@ -1660,12 +1660,6 @@
             "time": "2015-01-03 15:23:51"
         }
     ],
-<<<<<<< HEAD
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-=======
     "packages-dev": [
         {
             "name": "bbatsche/entrust",
@@ -1865,7 +1859,6 @@
     "stability-flags": {
         "zizaco/confide": 20
     },
->>>>>>> master
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -29,6 +29,7 @@ $env = $app->detectEnvironment(function()
     return isset($_SERVER['LARAVEL_ENV']) ? $_SERVER['LARAVEL_ENV'] : 'production';
 });
 
+
 /*
 |--------------------------------------------------------------------------
 | Bind Paths

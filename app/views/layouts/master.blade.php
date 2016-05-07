@@ -34,24 +34,44 @@
         </li>
       </ul>
       <div class="nav-menu btn-group pull-right" role="group">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal">Login</button>
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".signup-modal">Signup</button>
+        <button type="button" class="btn btn-default" id="login-button" data-toggle="modal" data-target=".login-modal">Login</button>
+        <button type="button" class="btn btn-default" id="signup-button" data-toggle="modal" data-target=".signup-modal">Signup</button>
       </div>
 
       <!-- Login modal -->
-      <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
-            ...
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="mySmallModalLabel">Welcome back!</h4>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Signup modal -->
-      <div class="modal fade Signup-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal fade signup-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
-            ...
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title text-center" id="mySmallModalLabel">Let's Get Started!</h4>
+              <div id="loginEmailField" class="form-group col-sm-10 col-sm-offset-1">
+                <label for="loginEmail" class="sr-only">Email</label>
+                <input id="loginEmail" type="email" class="form-control" placeholder="Email Address">
+              </div>
+              <div id="loginPasswordField" class="form-group col-sm-10 col-sm-offset-1">
+                  <label for="loginPass" class="sr-only">Password</label>
+                  <input id="loginPass" type="password" class="form-control" placeholder="Password">
+              </div>
+              <div id="emailLoginBtnDiv" class="form-group col-sm-10 col-sm-offset-1 text-center">
+                  <button id="loginWithEmailBtn" type="submit" class="btn btn-primary btn-block">CLICK TO LOG IN</button>
+              </div>
+              <div class="text-center">
+                  <a href="#" id="forgotPasswordLink">Forgot your password?</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -60,7 +80,7 @@
 
     <!-- CONTENT -->
 
-    <!-- Carousel
+    <!-- CAROUSEL
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -74,7 +94,7 @@
           <img class="first-slide" src="./img/aquifer.jpg">
           <div class="container">
             <div class="carousel-caption text-xs-left">
-              <h1>Welcome to the aquifer!</h1>
+              <h1>Welcome to the Edwards Aquifer!</h1>
               <p>The Edwards Acquifer - an artesian aquifer in the heart of Texas - provides water to more than two million Texas residents. Let's learn more about the aquifer, its history, and what makes it so special!</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
             </div>
@@ -83,8 +103,8 @@
         <div class="carousel-item">
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
+            <div class="carousel-caption text-xs-left">
+              <h1>Join the conservation cause!</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
             </div>
@@ -93,8 +113,8 @@
         <div class="carousel-item">
           <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
-            <div class="carousel-caption text-xs-right">
-              <h1>One more for good measure.</h1>
+            <div class="carousel-caption text-xs-left">
+              <h1>Track your water usage habits.</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
             </div>
@@ -121,21 +141,21 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <img class="img-circle" src="./img/microscope-icon.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Observe</h2>
+          <p>Our growing community of Edwards Aquifer Citizen Scientists plays a crucial role in enhancing our knowledge of the aquifer. Get started now by sharing photos, reporting water levels, and monitoring aquifer trends!</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <img class="img-circle" src="./img/droplet.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Conserve</h2>
+          <p>Drought or no drought, conservation is crucial to the health of the aquifer. Monitor your water use, see your impact on water supply, and learn how to be a water saving-guru with our Supreme Happiness app!</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <img class="img-circle" src="./img/diy.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>DIYerve</h2>
+          <p>Did you discover an awesome water-saving tip? Share it on our DIY discussion board and help teach others how to conserve. Share your .</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->

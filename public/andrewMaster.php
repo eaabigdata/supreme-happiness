@@ -1,26 +1,96 @@
-@extends('layouts.master')
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-@section('top-script')
-<style type="text/css">
-  .infosection{
-    background-color: rgb(65, 90, 104);
-    color: #fff;
-    padding: 10px;
-  }
+    <title>EAA Big Data Code-A-Thon</title>
 
-  #kandySubmit{
-    background-color: #025aa5;
-    border-color: #025aa5;
-  }
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-  #messageBox{
-    color: #000;
-  }
-</style>
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-@stop
+    <!-- Custom styles for this template -->
+    <link href="css/master.css" rel="stylesheet">
+  </head>
+  <body>
 
-@section('content')
+  <!-- NAVBAR -->
+    <nav class="navbar navbar-static-top navbar-light ">
+       <a class="navbar-brand" href="#">
+       <img alt="Brand" src="./img/eaa-logo-20.png">
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+      <div class="nav-menu btn-group pull-right" role="group">
+        <button type="button" class="btn btn-default" id="login-button" data-toggle="modal" data-target=".login-modal">Login</button>
+        <button type="button" class="btn btn-default" id="signup-button" data-toggle="modal" data-target=".signup-modal">Signup</button>
+      </div>
+
+      <!-- Login modal -->
+      <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="mySmallModalLabel">Welcome back!</h4>
+              <div id="loginEmailField" class="form-group col-sm-10 col-sm-offset-1">
+                <label for="loginEmail" class="sr-only">Email</label>
+                <input id="loginEmail" type="email" class="form-control" placeholder="Email Address">
+              </div>
+              <div id="loginPasswordField" class="form-group col-sm-10 col-sm-offset-1">
+                  <label for="loginPass" class="sr-only">Password</label>
+                  <input id="loginPass" type="password" class="form-control" placeholder="Password">
+              </div>
+              <div id="emailLoginBtnDiv" class="form-group col-sm-10 col-sm-offset-1 text-center">
+                  <button id="loginWithEmailBtn" type="submit" class="btn btn-primary btn-block">CLICK TO LOG IN</button>
+              </div>
+              <div class="text-center">
+                  <a href="#" id="forgotPasswordLink">Forgot your password?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Signup modal -->
+      <div class="modal fade signup-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title text-center" id="mySmallModalLabel">Let's Get Started!</h4>
+              <div id="loginEmailField" class="form-group col-sm-10 col-sm-offset-1">
+                <label for="loginEmail" class="sr-only">Email</label>
+                <input id="loginEmail" type="email" class="form-control" placeholder="Email Address">
+              </div>
+              <div id="loginPasswordField" class="form-group col-sm-10 col-sm-offset-1">
+                  <label for="loginPass" class="sr-only">Password</label>
+                  <input id="loginPass" type="password" class="form-control" placeholder="Password">
+              </div>
+              <div id="emailLoginBtnDiv" class="form-group col-sm-10 col-sm-offset-1 text-center">
+                  <button id="loginWithEmailBtn" type="submit" class="btn btn-primary btn-block">CLICK TO LOG IN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- CONTENT -->
+
     <!-- CAROUSEL
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -57,8 +127,8 @@
             <hr class="featurette-divider">
             <div class="row featurette">
               <div class="col-md-6 col-md-push-6 featurette-text featurette-right">
-                <h2 class="featurette-heading">Home to wildlife found nowhere else in the world.</h2>
-                <p class="lead">The Texas Blind Salamander may be the most famous aquifer resident, but they're not alone! Others include the San Marcos Salamander, Peck's Cave Amphipod, Comal Springs Riffle Beetle, Comal Spring Dryopid Beetle, Fountain Darter and San Marcos Gamusia!</p><p class="lead">Each of these animals is either threatened or endangered. Which is why we have to respect and care for our aquifer.</p>
+                <h2 class="featurette-heading">Home to amazing wildlife found nowhere else.</h2>
+                <p class="lead">The Texas Blind Salamander may be the most famous aquifer resident, but they're not alone! Others include the San Marcos Salamander, Peck's Cave Amphipod, Comal Springs Riffle Beetle, Comal Spring Dryopid Beetle, Fountain Darter and San Marcos Gamusia!</p><p class="lead">Each of these animals is either threatened or endangered. That's why we have to respect and care for our aquifer.</p>
               </div>
               <div class="col-md-6 col-md-pull-6">
                 <img class="featurette-image img-fluid center-block" src="./img/narrow-salamander.jpg" alt="Generic placeholder image">
@@ -67,41 +137,28 @@
             <hr class="featurette-divider">
             <div class="row featurette">
               <div class="col-md-6 featurette-text featurette-left">
-                <h2 class="featurette-heading">Three different zones, three distinct jobs.</h2>
-                <p class="lead">The Edwards Aquifer is divided into three zones: catchment, recharge, and artesian. Rainfall events in the catchment area cause water to drain through streams into the recharge zone. The recharge zone is composed of exposed limestone which enters into the artesian zone, where wells draw water from the aquifer.</p>
+                <h2 class="featurette-heading">Different zones with different jobs.</h2>
+                <p class="lead">The Edwards Aquifer is divided into three zones: drainage, recharge, and artesian. Rainfall events in the drainage area cause water to drain through streams into the recharge zone. The recharge zone is composed of exposed limestone which enters into the artesian zone, where wells draw water from the aquifer.</p>
               </div>
               <div class="col-md-6">
                 <img class="featurette-image img-fluid center-block" src="./img/cross-section.jpg" alt="Generic placeholder image">
               </div>
             </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-              <div class="col-md-6 col-md-push-6 featurette-text featurette-right">
-                <h2 class="featurette-heading">The constant battle against drought.</h2>
-                <p class="lead">San Antonio enters four stages of drought management depending on aquifer levels. There are several year-round restrictions, and more are added as the level diminishes, restricting where, when, and how much water may be used. Sometimes strict regulations are unavoidable, but we should always try to prevent them!</p>
-              </div>
-              <div class="col-md-6 col-md-pull-6">
-                <img class="featurette-image img-fluid center-block" src="./img/drought.jpg" alt="Generic placeholder image">
-              </div>
-            </div>
-            <hr class="featurette-divider">
-            <p class="lead text-center">Are you ready to start doing your part to take care of our precious aquifer?</p>
-            <button type="button" id="info-modal-button" class="btn btn-lg btn-primary" data-dismiss="modal" data-target=".signup-modal">Click here to get started!</button>
           </div>
         </div>
       </div>
         <div class="carousel-item">
-          <img class="second-slide" src="img/scientist.jpg" alt="Second slide">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
             <div class="carousel-caption text-xs-left">
-              <h1>Become an aquifer scientist!</h1>
-              <p>You can contribute to real usable aquifer data by getting meter readings, taking photos and writing reports! Join today as a Citizen Scientist, and help us gain a better understanding of the aquifer's behavior.</p>
-              <p><a class="btn btn-lg btn-primary" id="signup-button" data-toggle="modal" data-target=".signup-modal">Learn more</a></p>
+              <h1>Join the conservation cause!</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="third-slide" src="img/faucet_drip.jpg" alt="Third slide">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
             <div class="carousel-caption text-xs-left">
               <h1>Track your water usage habits.</h1>
@@ -150,6 +207,7 @@
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
+
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
@@ -191,47 +249,24 @@
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
-      </div><!-- /.container -->
 
-      <!-- KANDY AND WIDGET -->
-      <section class="infosection">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <iframe width="250px" height="260px" src="http://data.edwardsaquifer.org/j-17.php" scrolling="no" frameborder="0"></iframe>
-            </div>
-            <div class="col-md-6">
-              <fieldset>
-                  <legend>Ask A Scientist!</legend>
 
-                  <!-- User input: Recipient and message text fields. -->
-                  {{-- <p>Recipient: <input type="text" id="recipient"/></p> --}}
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-xs-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Edwards Aquifer Authority &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">Contact</a></p>
+      </footer>
 
-                  <p>Message: <textarea id="messageBox"> </textarea></p>
+    </div><!-- /.container -->
 
-                  <!-- User input: Send button. -->
-                  <input id="kandySubmit" type="button" value="Send Message" onclick="sendMessage();"/>
-              </fieldset>
 
-              <fieldset class="well">
-                  <legend>Chat</legend>
-                  <div id="chat-messages"> </div>
-              </fieldset>
-
-            </div>
-          </div>
-        </div>
-      </section>
-@stop
-
-@section('bottom-script')
-  <script src="https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.5.0/kandy.min.js" ></script>
-  <script type="text/javascript" src="/js/kandychat.js"></script>
-<script>
-$("#info-modal-button").on('click', (function () {
-   $('#signup-button').trigger('click');
-}));
-
-</script>
-
-@stop
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

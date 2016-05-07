@@ -16,3 +16,9 @@ Route::get('/', function()
 	return View::make('layouts.master');
 
 });
+
+Route::resource('diys', 'DiysController');
+Route::resource('tags', 'TagsController');
+Route::resource('ratings', 'RatingsController');
+Route::resource('usages', 'UsagesController');
+Route::resource('instances', 'InstancesController');

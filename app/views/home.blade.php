@@ -37,7 +37,7 @@
             <div class="carousel-caption text-xs-left">
               <h1>Welcome to the Edwards Aquifer!</h1>
               <p>The Edwards Acquifer - an artesian aquifer in the heart of Texas - provides water to more than two million Texas residents. Let's learn more about the aquifer, its history, and what makes it so special!</p>
-              <button type="button" class="btn btn-lg btn-primary" id="slide-one-learn" data-toggle="modal" data-target=".slide-one-modal">Learn More</button>
+              <p><a class="btn btn-lg btn-primary" id="slide-one-learn" role="button" data-toggle="modal" data-target=".slide-one-modal">Learn More!</a></p>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@
             </div>
             <hr class="featurette-divider">
             <p class="lead text-center">Are you ready to start doing your part to take care of our precious aquifer?</p>
-            <button type="button" id="info-modal-button" class="btn btn-lg btn-primary" data-dismiss="modal" data-target=".signup-modal">Click here to get started!</button>
+            <button type="button" id="info-modal-button" class="btn btn-lg btn-primary" data-dismiss="modal" data-target=".signup-modal">Get Started!</button>
           </div>
         </div>
       </div>
@@ -95,8 +95,8 @@
           <div class="container">
             <div class="carousel-caption text-xs-left">
               <h1>Become an aquifer scientist!</h1>
-              <p>You can contribute to real usable aquifer data by getting meter readings, taking photos and writing reports! Join today as a Citizen Scientist, and help us gain a better understanding of the aquifer's behavior.</p>
-              <p><a class="btn btn-lg btn-primary" id="signup-button" data-toggle="modal" data-target=".signup-modal">Learn more</a></p>
+              <p>You can contribute to real usable aquifer data by getting meter readings, taking photos and writing reports! Join today as a Citizen Scientist, and help us gain a better understanding of the aquifer.</p>
+              <p><a class="btn btn-lg btn-primary" id="carousel-signup-button" data-toggle="modal" data-target=".signup-modal">Get Started!</a></p>
             </div>
           </div>
         </div>
@@ -105,8 +105,8 @@
           <div class="container">
             <div class="carousel-caption text-xs-left">
               <h1>Track your water usage habits.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <p>It's easy to get into the habit of using more water than we should, but with a few simple changes, you can start conserving like a pro. Our handy habit tracking web app is here to help you along the way!</p>
+              <p><a class="btn btn-lg btn-primary" id="carousel-signup-button" data-toggle="modal" data-target=".signup-modal">Get Started!</a></p>
             </div>
           </div>
         </div>
@@ -134,64 +134,22 @@
           <img class="img-circle" src="./img/microscope-icon.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Observe</h2>
           <p>Our growing community of Edwards Aquifer Citizen Scientists plays a crucial role in enhancing our knowledge of the aquifer. Get started now by sharing photos, reporting water levels, and monitoring aquifer trends!</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="" role="button">Become a Citizen Scientist &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="./img/droplet.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Conserve</h2>
           <p>Drought or no drought, conservation is crucial to the health of the aquifer. Monitor your water use, see your impact on water supply, and learn how to be a water saving-guru with our Supreme Happiness app!</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="{{action('InstancesController@create')}}" role="button">Track Your Habits & Conserve &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="./img/diy.png" alt="Generic placeholder image" width="140" height="140">
           <h2>DIYerve</h2>
           <p>Got some awesome water-saving tips and tricks? Share them with the EAA community! Our DIY discussion platform let's water-savers make a difference by teaching others how to reduce water consumption.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="{{action('DiysController@create')}}" role="button">Teach and Be Taught &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-      </div><!-- /.container -->
+    </div><!-- /.container -->
 
       <!-- KANDY AND WIDGET -->
       <section class="infosection">
@@ -217,7 +175,6 @@
                   <legend>Chat</legend>
                   <div id="chat-messages"> </div>
               </fieldset>
-
             </div>
           </div>
         </div>
@@ -227,11 +184,10 @@
 @section('bottom-script')
   <script src="https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.5.0/kandy.min.js" ></script>
   <script type="text/javascript" src="/js/kandychat.js"></script>
-<script>
-$("#info-modal-button").on('click', (function () {
-   $('#signup-button').trigger('click');
-}));
-
-</script>
+  <script>
+  $("#info-modal-button").on('click', (function () {
+     $('#signup-button').trigger('click');
+  }));
+  </script>
 
 @stop

@@ -13,6 +13,8 @@ class Tag extends \Eloquent {
 		'tag'
 	];
 
+	public $timestamps = false;
+
 	public function diys()
 	{
 	    return $this->belongsToMany('Diy');

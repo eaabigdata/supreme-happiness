@@ -21,7 +21,6 @@ Route::resource('ratings', 'RatingsController');
 Route::resource('usages', 'UsagesController');
 Route::resource('instances', 'InstancesController');
 Route::resource('reports', 'ReportsController');
-//
 
 // Confide routes
 Route::get('users/create', 'UsersController@create');

@@ -25,6 +25,7 @@ class CreateReportsTable extends Migration {
 			$table->foreign('profile_id')->references('id')->on('profiles')->onDelete('cascade');
 
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

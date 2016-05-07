@@ -34,15 +34,4 @@ class Profile extends \Eloquent {
     {
         return $this->hasMany('Report');
     }
-
-    public function uploadImage($file)
-    {
-        $name = $file->getClientOriginalName();
-
-        $path = '/uploadedimgs/';
-
-        $file->move(public_path() . $path, $name);
-
-        $this->image_url = $path . $name;
-    }
 }

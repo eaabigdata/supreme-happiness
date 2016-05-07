@@ -4,10 +4,25 @@ class Report extends \Eloquent {
     protected $table = "reports";
 
     protected $rules = [
-        // set up rules for each field
+        'description' => 'required|min:50|max:1000',
+        'location_id' => 'required|numeric',
+        'profile_id'  => 'required|numeric'
     ];
 
 	protected $fillable = [
-        // define fillable data
+        'description',
+        'image_url',
+        'location_id',
+        'profile_id'
     ];
+
+    public function profile()
+    {
+        return $this->belongsTo('Profile');
+    }
+
+    public function location()
+    {
+        return $this->hasOne('Location');
+    }
 }

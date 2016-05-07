@@ -1,13 +1,13 @@
 <?php
 
-use Illuminate\Auth\UserTrait;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
+use Zizaco\Confide\ConfideUser;
+use Zizaco\Confide\ConfideUserInterface;
+use Bbatsche\Entrust\Contracts\EntrustUserInterface;
+use Bbatsche\Entrust\Traits\EntrustUserTrait;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends Eloquent implements ConfideUserInterface, EntrustUserInterface
 
-	use UserTrait, RemindableTrait;
+	use ConfideUser, EntrustUserTrait;
 
 	/**
 	 * The database table used by the model.
@@ -23,4 +23,26 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
+	protected $rules = array(
+		'email' 	 	   => 'required|email|max:255|unique:users',
+		'username'		   => 'required|max:255|unique:users',
+		'first_name' 	   => 'max:255',
+		'last_name'  	   => 'max:255',
+		'password'		   => 'required'
+	);
+
+	protected $fillable = array(
+		'email',
+		'username',
+		'first_name',
+		'last_name',
+		'password'
+	);
+
+	protected $hashable = [ 'password' ];
+
+	public function profile()
+	{
+		return $this->hasOne('Profile');
+	}
 }

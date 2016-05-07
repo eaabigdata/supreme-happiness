@@ -2,22 +2,32 @@
 
 class Instance extends \Eloquent {
 
+    protected $table = 'instances';
+
 	// Add your validation rules here
 	public static $rules = [
-		// 'title' => 'required'
+        'duration_in_ms' => 'required|numeric',
+        'total_gpm'      => 'required|numeric',
+        'profile_id'     => 'required|numeric',
+        'usage_id'       => 'requried|numeric'
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
-
-	public function user()
-    {
-        return $this->belongsTo('User');
-    }
+	protected $fillable = [
+        'duration_in_ms',
+        'total_gpm',
+        'profile_id',
+        'usage_id'
+    ];
 
     public function usage()
     {
         return $this->belongsTo('Usage');
+    }
+
+    public function instance()
+    {
+        return $this->belongsTo('Profile');
     }
 
 }

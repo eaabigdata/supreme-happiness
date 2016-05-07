@@ -2,6 +2,8 @@
 
 class Usage extends \Eloquent {
 
+	protected $table = 'usages';
+
 	// Add your validation rules here
 	public static $rules = [
 		// 'title' => 'required'

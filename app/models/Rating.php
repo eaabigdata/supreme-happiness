@@ -2,6 +2,7 @@
 
 class Rating extends \Eloquent {
 
+	protected $table = 'ratings';
 	// Add your validation rules here
 	public static $rules = [
 		// 'title' => 'required'

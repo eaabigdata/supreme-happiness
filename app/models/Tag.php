@@ -2,6 +2,7 @@
 
 class Tag extends \Eloquent {
 
+	protected $table = 'tags';
 	// Add your validation rules here
 	public static $rules = [
 		// 'title' => 'required'

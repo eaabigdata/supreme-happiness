@@ -3,7 +3,7 @@
 class Report extends \Eloquent {
     protected $table = "reports";
 
-    protected $rules = [
+    public static $rules = [
         'description' => 'required|min:50|max:1000',
         'location_id' => 'required|numeric',
         'profile_id'  => 'required|numeric'

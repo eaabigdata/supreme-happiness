@@ -39,7 +39,7 @@ class ReportsController extends \BaseController {
 		}
 
 		Report::create($data);
-
+		
 		return Redirect::route('reports.index');
 	}
 
@@ -107,4 +107,3 @@ class ReportsController extends \BaseController {
 }
 
 
-}

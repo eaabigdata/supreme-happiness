@@ -10,7 +10,8 @@
 	"require-dev": {
     "way/generators": "~2.0",
     "zizaco/confide": "~4.3@dev",
-    "bbatsche/entrust": "~2.0"
+    "bbatsche/entrust": "~2.0",
+    "fzaninotto/faker": "^1.5"
 	},
 	"autoload": {
 		"classmap": [

@@ -1,0 +1,1 @@
+/vagrant/sites/edwardsaquifer.dev/app/views/reports/show.blade.php

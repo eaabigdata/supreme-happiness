@@ -13,6 +13,8 @@ class Rating extends \Eloquent {
 		'rating'
 	];
 
+	public $timestamps = false;
+
 	public function diys()
 	{
 	    return $this->belongsToMany('Diy');

@@ -6,9 +6,6 @@
         <li class="nav-item active">
           <a class="nav-link" href="{{action('HomeController@showWelcome')}}">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{action('DiysController@create')}}">About</a>
-        </li>
       </ul>
       <div class="nav-menu btn-group pull-right" role="group">
         <button type="button" class="btn btn-default" id="login-button" data-toggle="modal" data-target=".login-modal">Login</button>

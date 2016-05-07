@@ -25,7 +25,8 @@
         </fieldset>
         <fieldset class="form-group">
           <label for="inputFile">Upload a photo</label>
-          <input type="file" class="form-control-file" id="inputFile">
+          <input type="filepicker" data-fp-apikey="A9Y9ttbXcRTeOD3Z1hYl7z"
+          onchange="alert(event.fpfile.url)">
           <small class="text-muted">Upload a photo of your DIY tip in action! (Optional)</small>
         </fieldset>
         <fieldset class="form-group">

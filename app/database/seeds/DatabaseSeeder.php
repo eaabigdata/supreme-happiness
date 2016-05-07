@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder {
 		DB::table('permissions')->delete();
 		DB::table('permission_role')->delete();
 		DB::table('role_user')->delete();
+		DB::table('profiles')->delete();
 		DB::table('diys')->delete();
 		DB::table('tags')->delete();
 		DB::table('diy_tag')->delete();
@@ -26,16 +27,17 @@ class DatabaseSeeder extends Seeder {
 		DB::table('instances')->delete();
 		
 
-		$this->call('UserTableSeeder');
+		$this->call('UsersTableSeeder');
+		$this->call('ProfilesTableSeeder');
 		$this->call('DiysTableSeeder');
 		$this->call('TagsTableSeeder');
 		$this->call('RatingsTableSeeder');
 		$this->call('UsagesTableSeeder');
 		$this->call('InstancesTableSeeder');
-		// $this->call('LocationsTableSeeder');
-		// $this->call('ReportsTableSeeder');
-		$this->call('DiyTagsTableSeeder');
-		$this->call('DiyRatingsTableSeeder');
+		$this->call('LocationsTableSeeder');
+		$this->call('ReportsTableSeeder');
+		// $this->call('DiyTagsTableSeeder');
+		// $this->call('DiyRatingsTableSeeder');
 	}
 
 }

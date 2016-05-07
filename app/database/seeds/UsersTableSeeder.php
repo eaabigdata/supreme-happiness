@@ -11,14 +11,9 @@ class UsersTableSeeder extends Seeder {
         $user->last_name             = 'Hafez';
         $password                    = 'password';
         $user->password              = $password;
-        $user->password_confirmation = $password;
-        
-        if ($user->isValid()) {
-            $user->save();
-        } else {
-            echo $user->getErrors()->toArray();
-        }
 
+        $user->save();
+        
         $user = new User();
         $user->email                 = 'bob@bob.bob';
         $user->username              = 'MKSocks91';
@@ -26,14 +21,9 @@ class UsersTableSeeder extends Seeder {
         $user->last_name             = 'Warren';
         $password                    = 'password1';
         $user->password              = $password;
-        $user->password_confirmation = $password;
-    
-        if ($user->isValid()) {
-            $user->save();
-        } else {
-            echo $user->getErrors()->toArray();
-        }
 
+        $user->save();
+        
         $user = new User();
         $user->email                 = 'andrew@bandrew.can';
         $user->username              = 'PomoFomo';
@@ -41,14 +31,9 @@ class UsersTableSeeder extends Seeder {
         $user->last_name             = 'Powell-Morse';
         $password                    = 'password2';
         $user->password              = $password;
-        $user->password_confirmation = $password;
-
-        if ($user->isValid()) {
-            $user->save();
-        } else {
-            echo $user->getErrors()->toArray();
-        }
-
+    
+        $user->save();
+    
         $user = new User();
         $user->email                 = 'taylor@taynay.can';
         $user->username              = 'Gobbledegook';
@@ -56,13 +41,8 @@ class UsersTableSeeder extends Seeder {
         $user->last_name             = 'Hobbs';
         $password                    = 'password3';
         $user->password              = $password;
-        $user->password_confirmation = $password;
 
-        if ($user->isValid()) {
-            $user->save();
-        } else {
-            echo $user->getErrors()->toArray();
-        }
+        $user->save();
 	}
 
 }

@@ -53,7 +53,7 @@ class UsagesTableSeeder extends Seeder {
 
 		$usage= new Usage();
 		$usage->type = 'swimming pool';
-		$usage->gpm = 10,000;
+		$usage->gpm = 10000;
 		$usage->save();
 
 		$usage= new Usage();

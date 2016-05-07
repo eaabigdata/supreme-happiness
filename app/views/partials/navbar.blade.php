@@ -1,13 +1,10 @@
 <!-- NAVBAR -->
     <nav class="navbar navbar-static-top navbar-light ">
-       <a class="navbar-brand" href="#">
+       <a class="navbar-brand" href="{{action('HomeController@showWelcome')}}">
        <img alt="Brand" src="/img/eaa-logo-20.png">
       <ul class="nav navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="{{action('HomeController@showWelcome')}}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{action('DiysController@create')}}">About</a>
         </li>
       </ul>
       <div class="nav-menu btn-group pull-right" role="group">

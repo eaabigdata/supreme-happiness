@@ -28,6 +28,13 @@ body {
   color: rgba(126, 120, 88, 0.85)
 }
 
+#info-modal-button {
+  margin:auto;
+  margin-bottom:20px;
+  width: 155px;
+  display: block;
+}
+
 .modal-sm {
   width:400px;
 }

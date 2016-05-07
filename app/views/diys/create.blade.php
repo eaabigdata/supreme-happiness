@@ -13,7 +13,6 @@
       </div>
     </div>
     <div class="container">
-      <h2>Give us the goods!</h2>
       <form>
         <fieldset class="form-group">
           <label for="title">Title</label>

@@ -25,7 +25,9 @@
     @include('partials.navbar')
     <!-- CONTENT -->
 
+
     @yield('content')
+
 
     @include('partials.footer')
 

@@ -8,7 +8,6 @@ class ReportsTableSeeder extends Seeder {
 	public function run()
 	{
 		$faker = Faker::create();
-        $locations = Location::all();
 
         for($i = 0; $i < 20; $i += 1)
         {
@@ -16,7 +15,7 @@ class ReportsTableSeeder extends Seeder {
 
             $report->image_url   = $faker->imageUrl();
             $report->description = $faker->realText(500);
-            $report->location_id = $locations->random();
+            $report->location_id = Location::all()->random()->id;
             $report->profile_id  = mt_rand(1, 3);
             
             $report->save();

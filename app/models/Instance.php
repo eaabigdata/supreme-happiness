@@ -25,7 +25,7 @@ class Instance extends \Eloquent {
         return $this->belongsTo('Usage');
     }
 
-    public function instance()
+    public function profile()
     {
         return $this->belongsTo('Profile');
     }

@@ -8,14 +8,14 @@ class InstancesTableSeeder extends Seeder {
 	public function run()
 	{
 		$faker = Faker::create();
-		$users = User::all();
-		$usage = Usage::all();
 
 		foreach(range(1, 10) as $index)
 		{
 			Instance::create([
-				'user_id'=>$user->id,
-				'usage_id'=>$usage->id
+				'duration_in_ms' => $faker->numberBetween(1000, 1500),
+				'total_gpm'		 => $faker->numberBetween(10, 100),
+				'profile_id'  => Profile::all()->random()->id,
+				'usage_id' => Usage::all()->random()->id
 			]);
 		}
 	}

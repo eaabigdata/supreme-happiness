@@ -10,6 +10,7 @@ class ProfilesTableSeeder extends Seeder {
 		$faker = Faker::create();
 
         foreach(User::all() as $user) {
+            
             $profile = new Profile();
 
             $profile->about_me = $faker->realText(200);

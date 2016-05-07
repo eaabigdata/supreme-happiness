@@ -9,16 +9,13 @@ class DiysTableSeeder extends Seeder {
 
 	{
 		$faker = Faker::create();
-		$users = User::all();
 
 		foreach(range(1, 10) as $index)
 		{
-			$user = $user->random();
-
 			Diy::create([
 				'title'   => $faker->sentence,
 				'content' => $faker->text,
-				'user_id' => $user->id
+				'user_id' => User::orderByRaw('RAND()')->first()->id
 			]);
 		}
 	}

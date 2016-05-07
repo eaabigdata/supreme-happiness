@@ -16,6 +16,8 @@ class Usage extends \Eloquent {
 		'gpm'
 	];
 
+	public $timestamps = false;
+
 	public function instances()
 	{
 	    return $this->hasMany('Instance')->orderBy('created_at', 'desc');

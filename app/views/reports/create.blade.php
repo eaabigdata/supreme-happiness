@@ -22,8 +22,9 @@
         </div>
         <fieldset class="form-group">
           <label for="inputFile">Upload a photo</label>
-          <input type="filepicker" name="image_url" data-fp-apikey="A9Y9ttbXcRTeOD3Z1hYl7z" value="event.fpfile.url" onchange="changeText(event.fpfile.url)">
-          <small id="changeText" class="text-muted">Upload a photo for your report! (Optional)</small>
+          <input type="filepicker" data-fp-apikey="A9Y9ttbXcRTeOD3Z1hYl7z" value="event.fpfile.url" onchange="changeText(event.fpfile.url)">
+          <hidden id="changeText" name="image_path"value="">
+          <small  class="text-muted">Upload a photo for your report! (Optional)</small>
         </fieldset>
         <!-- CODE FOR TAG INPUTS BELOW-->
         <!-- https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/ -->
@@ -35,8 +36,8 @@
 @section('bottom-script')
 
 <script type="text/javascript">
-	function changeText(event.fpfile.url){
-		$('#changeText').text(event.fpfile.url);
+	function changeText(){
+		$('#changeText').value('Blob.url');
 	}	
 </script>
 

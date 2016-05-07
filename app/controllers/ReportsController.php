@@ -38,11 +38,8 @@ class ReportsController extends \BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$report->description = Input::get('description');
-		$report->image_url = Input::get('image_url');
-		$report->user_id = 1;
-		$report->location_id=1;
-
+		Report::create($data);
+		
 		return Redirect::route('reports.index');
 	}
 

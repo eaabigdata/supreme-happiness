@@ -1,14 +1,5 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
-use Faker\Factory as Faker;
-
-class EntrustTableSeeder extends Seeder {
-
-	public function run()
-	{
-		<?php
-
 class EntrustTableSeeder extends Seeder {
 
     public function run()
@@ -25,20 +16,37 @@ class EntrustTableSeeder extends Seeder {
 
         $conservationist->name         = 'conservationist';
         $conservationist->display_name = 'Conservationist';
-        $conservationist->description  = '';
+        $conservationist->description  = 'A user interacting with the application to submit and share water usage reports, diy feedback on how they conserve water, and sharing their progress on social media.';
 
         $conservationist->save();
 
         
         $canEditOwnRoles = new Permission();
 
-        $canEditOwnRoles->name = 'can_edit_own_roles';
+        $canEditOwnRoles->name         = 'can_edit_own_roles';
         $canEditOwnRoles->display_name = 'Can Edit Own Roles';
-        $canEditOwnRoles->description = 'User has the ability to update roles within the app. This should be utilized to add an additional role if the user wants to.';
+        $canEditOwnRoles->description  = 'User has the ability to update roles within the app. This should be utilized to add an additional role if the user wants to.';
 
         $canEditOwnRoles->save();
 
-        $user->attachPermissions(array(
+        $canPostReports = new Permission();
+
+        $canPostReports->name         = 'can_post_reports';
+        $canPostReports->display_name = 'Can Post Reports';
+        $canPostReports->description  = 'User can submit reports to the EAA for scientific analysis and feedback.'
+
+        $canPostReports->save();
+
+        $canViewOwnProfile = new Permission();
+
+        $canViewOwnProfile->name         = 'can_view_own_profile';
+        $canViewOwnProfile->display_name = 'Can Post Reports';
+        $canViewOwnProfile->description  = 'User can submit reports to the EAA for scientific analysis and feedback.'
+
+        $canViewOwnProfile->save();
+
+
+        $scientist->attachPermissions(array(
             $canEditOwnProfile,
             $canEditOwnPosts,
             $canFlag,
